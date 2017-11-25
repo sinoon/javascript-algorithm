@@ -4,7 +4,7 @@
     "description": "用JavaScript实现算法以及相应的自动化测试",
     "main": "index.js",
     "scripts": {
-        "test": "jest --coverage"
+        "test": "jest --coverage --verbose"
     },
     "author": "",
     "license": "ISC",
