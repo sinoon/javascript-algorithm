@@ -4,7 +4,7 @@
     "description": "用JavaScript实现算法以及相应的自动化测试",
     "main": "index.js",
     "scripts": {
-        "test": "jest"
+        "test": "jest --coverage"
     },
     "author": "",
     "license": "ISC",
@@ -12,6 +12,10 @@
         "jest-cli": "^21.2.1"
     },
     "jest": {
-        "testEnvironment": "node"
+        "testEnvironment": "node",
+        "verbose": true,
+        "collectCoverageFrom": [
+            "src/**.js"
+        ]
     }
 }
