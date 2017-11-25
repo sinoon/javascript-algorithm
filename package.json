@@ -1,0 +1,17 @@
+{
+    "name": "algorithm-learn",
+    "version": "1.0.0",
+    "description": "用JavaScript实现算法以及相应的自动化测试",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "jest-cli": "^21.2.1"
+    },
+    "jest": {
+        "testEnvironment": "node"
+    }
+}
