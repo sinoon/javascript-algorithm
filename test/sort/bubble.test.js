@@ -6,7 +6,7 @@
 const {normal, optimize, optimizeNext} = require('../../src/sort/bubble')
 const {prepareList, check} = require('../../util/sort')
 
-const count = 100
+const count = 1000
 let list = prepareList(count)
 
 test(`普通算法：${count}个数排序`, () => {
