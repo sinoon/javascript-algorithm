@@ -3,14 +3,34 @@
  * email sinoon1218@gmail.com
  */
 
-const merger = require('../../../src/merge/merge')
+const {instruct, fp} = require('../../../src/merge/merge')
 
-test('merge', () => {
+test('指令式编程', () => {
     const list = [
         [1, 2, 3],
+        [2, 3, 4, 5],
+        [2, 3, 4, 5],
+        [2, 3, 4, 5],
+        [2, 3, 4, 5],
+        [2, 3, 4, 5],
         [2, 3, 4, 5]
     ]
-    const result = merger(list)
-    console.log(result)
-    expect(result.length).toBe(12)
+    const result = instruct(list)
+    // console.log(result)
+    expect(result.length).toBe(12288)
+})
+
+test('函数式编程', () => {
+    const list = [
+        [1, 2, 3],
+        [2, 3, 4, 5],
+        [2, 3, 4, 5],
+        [2, 3, 4, 5],
+        [2, 3, 4, 5],
+        [2, 3, 4, 5],
+        [2, 3, 4, 5]
+    ]
+    const result = fp(list)
+    // console.log(result)
+    expect(result.length).toBe(12288)
 })

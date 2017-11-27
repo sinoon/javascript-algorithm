@@ -4,13 +4,13 @@
  */
 
 /**
- * 
- * 
- * @param {Array} a 
- * @param {Array} b 
- * @param {Array} [result=[]] 
- * @returns 
-*/
+ *
+ *
+ * @param {Array} a
+ * @param {Array} b
+ * @param {Array} [result=[]]
+ * @returns
+ */
 function merge (a, b, result = []) {
     for (let i = 0; i < a.length; i++) {
         for (let n = 0; n < b.length; n++) {
@@ -20,7 +20,17 @@ function merge (a, b, result = []) {
     return result
 }
 
-module.exports = function divider (arr) {
+function mergeFun (a, b) {
+    return a.reduce((result, i) => {
+        result.push(...b.reduce((result, n) => {
+            result.push('' + i + n)
+            return result
+        }, []))
+        return result
+    }, [])
+}
+
+function divider (arr, merge) {
     while (arr.length > 0) {
         const a = arr.pop()
         const b = arr.pop()
@@ -32,3 +42,13 @@ module.exports = function divider (arr) {
 
     return arr[0]
 }
+
+const flow = function (merge) {
+    return function (arr) {
+        return divider(arr, merge)
+    }
+}
+
+module.exports.instruct = flow(merge)
+
+module.exports.fp = flow(mergeFun)
