@@ -3,6 +3,14 @@
  * email sinoon1218@gmail.com
  */
 
+/**
+ * 
+ * 
+ * @param {Array} a 
+ * @param {Array} b 
+ * @param {Array} [result=[]] 
+ * @returns 
+*/
 function merge (a, b, result = []) {
     for (let i = 0; i < a.length; i++) {
         for (let n = 0; n < b.length; n++) {
